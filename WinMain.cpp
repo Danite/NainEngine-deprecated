@@ -1,11 +1,16 @@
 #include "WinMain.h"
 
 //Aditional inlcude files
+#include "Engine.h"
+
 #ifndef _STRING_H
 	#include "string.h"
 #endif
 #ifndef _IOSTREAM_H
 	#include "iostream.h"
+#endif
+#ifndef _DELETEMACRO_H
+	#include "deletemacros.h"
 #endif
 
 #if defined (DEBUG) | defined (_DEBUG)
@@ -37,14 +42,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 #endif
 
 	//Create the engine.
-	//Engine* pEngine = new Engine();
+	Engine* pEngine = new Engine();
 
 	//Kick of the game.
-	//int result = pEngine->RunLoop();
+	int result = pEngine->RunLoop();
 
 	//Delete the engine.
-	//delete pEngine;
+	SafeDelete(pEngine);
 
-	//return result;
-	return 0;
+	return result;
+	
 }

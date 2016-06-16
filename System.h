@@ -3,32 +3,51 @@
 
 #include "UObject.h"
 
+//Additional include files
+#ifndef _CONTEXT_h
+	#include "context.h"
+#endif
+
 //Emumeration
 enum SystemType {
-	
+
+	Sys_Invalid,
 	Sys_Window,
 	Sys_Game,
 	Sys_Input,
 	Sys_Graphics,
-	Sys_GameTimer
+	Sys_GameTimer,
+
+	Sys_MAX
 };
 
 //Structs
 struct SystemData {
 
+	SystemData();
+	SystemData(const SystemType& type);
+
+	SystemType systemType;
 };
 
 class System : public UObject {
 
+	friend class Engine;
+
 public:
-	System();
+
+	System(const SystemData& data);
 	virtual ~System();
 
-	SystemType GetType() { return n_SystemType; }
+	virtual bool Initialize()					{ return UObject::Initialize(); }
+	virtual bool Update(Context& context)		{ return UObject::Update(context); }
+	virtual bool ShutDown()						{ return UObject::ShutDown(); }
+
+	SystemType GetType() { return m_SystemType; }
 
 protected:
 
-	SystemType n_SystemType;
+	SystemType m_SystemType;
 };
 
 #endif

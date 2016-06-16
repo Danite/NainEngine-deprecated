@@ -11,17 +11,17 @@
 	#include "string.h"
 #endif
 
-EngineState Engine::n_EngineState = EngineState::Invalid;
+EngineState Engine::m_EngineState = EngineState::Invalid;
 
 Engine::Engine() {
 
-	n_EngineState = EngineState::Constructing;
+	m_EngineState = EngineState::Constructing;
 }
 
 
 Engine::~Engine() {
 
-	n_EngineState = EngineState::Destroying;
+	m_EngineState = EngineState::Destroying;
 }
 
 int Engine::RunLoop() {
@@ -35,9 +35,9 @@ int Engine::RunLoop() {
 
 	MSG msg = {};
 
-	n_EngineState = EngineState::Runnig;
+	m_EngineState = EngineState::Runnig;
 
-	while (msg.message != WM_QUIT && n_EngineState == EngineState::Runnig) {
+	while (msg.message != WM_QUIT && m_EngineState == EngineState::Runnig) {
 
 		//CheckResize();
 
@@ -62,7 +62,7 @@ int Engine::RunLoop() {
 
 int Engine::Initialize() {
 
-	n_EngineState = EngineState::Initializing;
+	m_EngineState = EngineState::Initializing;
 
 	Game* game = CreateGame();
 
@@ -85,9 +85,9 @@ int Engine::Update(const Context& context) {
 }
 int Engine::ShutDown() {
 
-	n_EngineState = EngineState::ShuttingDown;
+	m_EngineState = EngineState::ShuttingDown;
 
-	for (std::pair<SystemType, System*> psys : n_mapSystems) {
+	for (std::pair<SystemType, System*> psys : m_mapSystems) {
 
 		//if (!psys.second->ShutDown()) {
 
@@ -103,7 +103,7 @@ int Engine::ShutDown() {
 
 int Engine::AddSystem(System* psys) {
 
-	auto element = n_mapSystems.insert(std::make_pair(psys->GetType(), psys));
+	auto element = m_mapSystems.insert(std::make_pair(psys->GetType(), psys));
 	if (element.second)
 		return true;
 

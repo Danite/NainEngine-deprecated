@@ -45,7 +45,7 @@ public:
 	//void* operator new(size_t size);
 	//void operator delete(void* pdelete);
 
-	static EngineState GetEngineState() { return n_EngineState;  }
+	static EngineState GetEngineState() { return m_EngineState;  }
 
 private:
 
@@ -60,7 +60,7 @@ private:
 	template<typename T>
 	T* GetSystem(SystemType systype) {
 
-		T* psys = static_cast<T*>(n_mapSystems[systype]);
+		T* psys = static_cast<T*>(m_mapSystems[systype]);
 		if (!psys) {
 			
 			//Logger::Log("System is not valid");
@@ -73,8 +73,8 @@ private:
 	//Create the game instance
 	Game* CreateGame();
 
-	std::map<SystemType, System*> n_mapSystems;
-	static EngineState n_EngineState;
+	std::map<SystemType, System*> m_mapSystems;
+	static EngineState m_EngineState;
 };
 
 #endif

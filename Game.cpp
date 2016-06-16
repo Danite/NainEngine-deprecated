@@ -1,8 +1,9 @@
 #include "Game.h"
 
-Game::Game(const GameData& data) {
+Game::Game(const GameData& data) 
 
-	n_SystemType = SystemType::Sys_Game;
+{
+	m_SystemType = SystemType::Sys_Game;
 }
 Game::~Game() {
 

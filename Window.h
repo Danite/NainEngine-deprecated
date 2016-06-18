@@ -52,11 +52,11 @@ public:
 	int GetWidth();
 	int GetHeight();
 
-	HWND GetWindowHandle();
-	HDC GetDiviceContext();
-	HINSTANCE GetInstance();
+	HWND GetWindowHandle() { return m_hWindow; }
+	HDC GetDiviceContext() { return m_hDC; }
+	HINSTANCE GetInstance() { return m_hInst; }
 
-	ResizeData& GetRisizeData() { return m_ResizeData; }
+	ResizeData& GetResizeData() { return m_ResizeData; }
 
 	LRESULT HandleEvent(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lparam);
 

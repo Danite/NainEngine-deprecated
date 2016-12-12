@@ -21,7 +21,7 @@ enum SystemType;
 class System;
 class Game;
 
-//Enumeration
+
 
 enum EngineState {
 

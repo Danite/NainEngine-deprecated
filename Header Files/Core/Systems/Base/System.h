@@ -8,7 +8,7 @@
 	#include "context.h"
 #endif
 
-//Emumeration
+
 enum SystemType {
 
 	Sys_Invalid,
@@ -21,7 +21,7 @@ enum SystemType {
 	Sys_MAX
 };
 
-//Structs
+
 struct SystemData {
 
 	SystemData();

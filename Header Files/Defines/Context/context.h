@@ -5,7 +5,7 @@
 class Window;
 class Renderer;
 
-//Defines
+
 #define WINDOW (context.pWnd)
 #define RENDERER (context.pRenderer)
 

@@ -3,7 +3,7 @@
 
 #include "System.h"
 
-//Struct
+
 struct GameData : public SystemData {
 
 };

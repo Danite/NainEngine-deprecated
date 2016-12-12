@@ -17,7 +17,7 @@
 //Forward declaration
 class Window;
 
-//Struct
+
 struct GraphicsData : SystemData {
 
 public:

@@ -4,7 +4,7 @@
 //Forward declaration
 class Graphics;
 
-//Define
+
 #define GRAPHICSDEVICEMANAGER (GraphicsDeviceManager::GetInstance())
 
 class GraphicsDeviceManager

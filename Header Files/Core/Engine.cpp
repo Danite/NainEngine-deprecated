@@ -101,7 +101,7 @@ int Engine::Draw(Context& context) {
 
 	graph->BeginDraw();
 
-	//Draw our game
+	//Draw the game
 	RENDERER->SetColor(Color(1, 0, 0, 1));
 	RENDERER->FillRect(100, 100, 300, 200);
 

@@ -9,7 +9,7 @@
 	#include <string>
 #endif
 
-//Defines.
+
 #ifdef UNICODE
 	#define tstring wstring
 	#define TOSTRING(value) std::to_wstring(value)
@@ -19,4 +19,4 @@
 #endif
 
 
-#endif //_STRING_H
+#endif 

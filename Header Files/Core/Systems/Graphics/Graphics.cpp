@@ -6,7 +6,7 @@
 	#include "deletemacros.h"
 #endif
 
-//Struct
+
 GraphicsData::GraphicsData(Window* wnd)
 : SystemData(SystemType::Sys_Graphics)
 , pWnd(wnd)

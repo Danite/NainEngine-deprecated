@@ -16,7 +16,7 @@
 	#include "string.h"
 #endif
 
-//Structs
+
 struct WindowData : public SystemData {
 
 	WindowData();

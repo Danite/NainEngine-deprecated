@@ -6,7 +6,7 @@
 	#include <iostream>
 #endif
 
-//Defines.
+
 #ifdef UNICODE
 	#define tcout wcout
 	#define tcin wcin
@@ -15,4 +15,4 @@
 	#define tcin cin
 #endif
 
-#endif //_IOSTREAM_H
+#endif

@@ -22,6 +22,33 @@
     <Filter Include="Header Files\Defines">
       <UniqueIdentifier>{ab17f5bf-ce61-4e6e-8449-a801024194f3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Core\Systems">
+      <UniqueIdentifier>{fda26abd-f0fe-4613-a802-6b5a44351f8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SceneGraph">
+      <UniqueIdentifier>{30f1f6f6-c55b-42b4-bfd1-84e7624e2f4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SceneGraph\Base">
+      <UniqueIdentifier>{d0d71efc-961d-4aa5-ac1b-fe5a1d0db454}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Defines\Context">
+      <UniqueIdentifier>{efb1d620-d0bd-4b74-a62a-5ede31e23487}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\Systems\Base">
+      <UniqueIdentifier>{7cd95c8e-8ebb-4d7c-8db9-f13d394151a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Math">
+      <UniqueIdentifier>{b58d63b7-2fa6-47e1-bd81-f8800aa26b21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\Systems\Game">
+      <UniqueIdentifier>{a29452ae-dde4-4be6-8f81-8f3d0396da61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\Systems\Window">
+      <UniqueIdentifier>{ae873df0-f4da-4c40-8ef2-d596e70c396f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\Systems\Graphics">
+      <UniqueIdentifier>{2b720544-7892-403a-b2c8-97dcd93c1094}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="WinMain.h">
@@ -33,10 +60,88 @@
     <ClInclude Include="iostream.h">
       <Filter>Header Files\Defines</Filter>
     </ClInclude>
+    <ClInclude Include="deletemacros.h">
+      <Filter>Header Files\Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="context.h">
+      <Filter>Header Files\Defines\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>Header Files\Core\Systems\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="UObject.h">
+      <Filter>Header Files\SceneGraph\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix2D.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect2D.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2D.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="d2dutill.h">
+      <Filter>Header Files\Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="color.h">
+      <Filter>Header Files\Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files\Core\Systems\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>Header Files\Core\Systems\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Header Files\Core\Systems\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsDeviceManager.h">
+      <Filter>Header Files\Core\Systems\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
       <Filter>Header Files\Core\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="System.cpp">
+      <Filter>Header Files\Core\Systems\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Header Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="UObject.cpp">
+      <Filter>Header Files\SceneGraph\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix2D.cpp">
+      <Filter>Header Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Rect2D.cpp">
+      <Filter>Header Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2D.cpp">
+      <Filter>Header Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Header Files\Core\Systems\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>Header Files\Core\Systems\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Header Files\Core\Systems\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsDeviceManager.cpp">
+      <Filter>Header Files\Core\Systems\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
